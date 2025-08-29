@@ -1,0 +1,343 @@
+<!HomePage html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majo' Cheesecake | Amsterdam's Sweetest Indulgence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,235,235,0.8) 100%);
+        }
+        .menu-item:hover .menu-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .menu-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-cheese text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-red-500">Red Velvet Cheesecake</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-red-500 font-medium hover:text-red-600 transition">Home</a>
+                <a href="#menu" class="text-gray-700 hover:text-red-500 transition">Menu</a>
+                <a href="#about" class="text-gray-700 hover:text-red-500 transition">About</a>
+                <a href="#location" class="text-gray-700 hover:text-red-500 transition">Location</a>
+                <a href="#contact" class="text-gray-700 hover:text-red-500 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-gradient">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-red-600 mb-6">Sinfully Delicious Cheesecakes</h1>
+                <p class="text-lg text-gray-700 mb-8">In the heart of Amsterdam's Red Light District, we serve up the most indulgent cheesecakes that'll make you forget all other vices.</p>
+                <div class="flex space-x-4">
+                    <a href="#menu" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-medium transition shadow-lg">View Menu</a>
+                    <a href="#location" class="border-2 border-red-500 text-red-500 hover:bg-red-50 px-6 py-3 rounded-full font-medium transition">Find Us</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative floating">
+                    <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Delicious Cheesecake" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto">
+                    <div class="absolute -bottom-5 -right-5 bg-white px-4 py-2 rounded-full shadow-lg">
+                        <span class="font-bold text-red-500">€6.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="py-16 bg-red-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-600 mb-4">Our Signature Flavors</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Each slice is crafted with passion and the finest ingredients</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
+                    <div class="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-red-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Red Velvet</h3>
+                    <p class="text-gray-600 mb-4">Our namesake - rich, creamy and with just the right amount of decadence</p>
+                    <span class="text-red-500 font-bold">€7.50</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
+                    <div class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lemon text-yellow-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amsterdam Lemon</h3>
+                    <p class="text-gray-600 mb-4">Zesty lemon curd on a buttery biscuit base - a refreshing classic</p>
+                    <span class="text-red-500 font-bold">€6.90</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center">
+                    <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cannabis text-purple-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Space Cake</h3>
+                    <p class="text-gray-600 mb-4">Our playful nod to Amsterdam culture - minus the side effects</p>
+                    <span class="text-red-500 font-bold">€8.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-600 mb-4">Our Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">From classic favorites to daring innovations</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="relative overflow-hidden rounded-xl shadow-md menu-item">
+                    <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Berry Cheesecake" class="w-full h-64 object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-2">Mixed Berry Bliss</h3>
+                        <p class="text-red-100 mb-4">Fresh seasonal berries atop our creamy cheesecake</p>
+                        <span class="text-white font-bold">€7.90</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="relative overflow-hidden rounded-xl shadow-md menu-item">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af22f05f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Chocolate Cheesecake" class="w-full h-64 object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-2">Chocolate Sin</h3>
+                        <p class="text-red-100 mb-4">Rich dark chocolate ganache with cocoa crumble</p>
+                        <span class="text-white font-bold">€8.20</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="relative overflow-hidden rounded-xl shadow-md menu-item">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75cc5f70489?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Salted Caramel Cheesecake" class="w-full h-64 object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-2">Salted Caramel</h3>
+                        <p class="text-red-100 mb-4">Sweet meets salty in this perfect balance</p>
+                        <span class="text-white font-bold">€7.50</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-red-500 text-red-500 hover:bg-red-50 px-8 py-3 rounded-full font-medium transition">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-red-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cheesecake Shop Interior" class="rounded-xl shadow-xl w-full">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-red-600 mb-6">Our Sweet Story</h2>
+                <p class="text-gray-700 mb-4">Nestled in the vibrant Red Light District, Red Velvet Cheesecake was born from a passion for creating moments of pure indulgence amidst Amsterdam's most colorful neighborhood.</p>
+                <p class="text-gray-700 mb-6">We believe that everyone deserves a little sweetness in life, and our cheesecakes are crafted to deliver just that - a moment of pure, unadulterated pleasure.</p>
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-leaf text-red-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Locally Sourced</h4>
+                        <p class="text-gray-600 text-sm">We use only the finest Dutch dairy and local ingredients</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 mt-4">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-heart text-red-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">Handcrafted Daily</h4>
+                        <p class="text-gray-600 text-sm">Each cheesecake is made with love by our expert pastry chefs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-red-600 mb-4">Find Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Come visit our sweet oasis in the heart of Amsterdam</p>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Red Velvet Cheesecake</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3"></i>
+                                <p>Oudezijds Achterburgwal 42<br>1012 Amsterdam</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-red-500 mr-3"></i>
+                                <p>Open daily 11:00 - 22:00</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-red-500 mr-3"></i>
+                                <p>+31 20 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-bold text-gray-800 mb-2">Public Transport</h4>
+                            <p class="text-gray-600 text-sm">Metro: Nieuwmarkt (5 min walk)<br>Tram: Dam (8 min walk)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="h-96 w-full bg-gray-200 rounded-xl overflow-hidden">
+                        <!-- Embedded Google Map -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.476961783373!2d4.897315315801847!3d52.37245597978648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c0fc5c868f%3A0x7e9a9a3f8a3e3b1c!2sOudezijds%20Achterburgwal%2C%20Amsterdam!5e0!3m2!1sen!2snl!4v1621303837174!5m2!1sen!2snl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+                <p class="max-w-2xl mx-auto opacity-90">Have questions or want to place a large order? Reach out to us!</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm rounded-xl p-8">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-white placeholder-opacity-70">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-white placeholder-opacity-70">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="subject" class="block mb-2">Subject</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-white placeholder-opacity-70">
+                    </div>
+                    <div class="mt-6">
+                        <label for="message" class="block mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg focus:outline-none focus:ring-2 focus:ring-white placeholder-white placeholder-opacity-70"></textarea>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="w-full bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-cheese text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">Red Velvet Cheesecake</span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">Amsterdam's sweetest indulgence in the heart of the Red Light District.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#menu" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#location" class="text-gray-400 hover:text-white transition">Location</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Information</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                                <i class="fab fa-tripadvisor"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-400">hello@redvelvetcheesecake.nl</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Red Velvet Cheesecake. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality would go here
+        // This is a placeholder for actual implementation
+    </script>
+</body>
+</html>\
